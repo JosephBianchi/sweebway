@@ -1,0 +1,12 @@
+<h1>Add Station</h1>
+
+<%= form_for @station do |f| %>
+
+  <%= f.label :name %><br>
+  <%= f.text_field :name %><br>
+
+  <%= f.label :address %><br>
+  <%= f.text_field :address %><br>
+
+  <%= f.submit "Create" %><br>
+<% end %>

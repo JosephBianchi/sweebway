@@ -17,5 +17,12 @@
   <span class="male">Male</span><%= f.radio_button :sex, "m" %>
   <span class="female">Female</span><%= f.radio_button :sex, "f" %><br>
 
+  <%= f.label :password %><br>
+  <%= f.password_field :password %><br>
+
+  <%= f.label :password_confirmation %><br>
+  <%= f.password_field :password_confirmation %><br>
+
+
   <%= f.submit "Create" %><br>
 <% end %>
