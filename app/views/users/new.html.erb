@@ -1,0 +1,21 @@
+<h1 class="h1_new_user">Create Your Sweebway Account</h1>
+
+<%= form_for @user do |f| %>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %><br>
+
+  <%= f.label :email %><br>
+  <%= f.email_field :email %><br>
+
+  <%= f.label :phone %><br>
+  <%= f.phone_field :phone %><br>
+
+  <%= f.label :age %><br>
+  <%= f.number_field :age %><br>
+
+  <%= f.label :sex %>:<br>
+  <span class="male">Male</span><%= f.radio_button :sex, "m" %>
+  <span class="female">Female</span><%= f.radio_button :sex, "f" %><br>
+
+  <%= f.submit "Create" %><br>
+<% end %>

@@ -10,11 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170917164843) do
+ActiveRecord::Schema.define(version: 20170917190052) do
 
   create_table "hangouts", force: :cascade do |t|
     t.integer "user_id"
     t.integer "trip_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "interests", force: :cascade do |t|
+    t.string "name"
+    t.string "sub_category"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "interests_users", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "interest_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -40,7 +54,6 @@ ActiveRecord::Schema.define(version: 20170917164843) do
     t.string "phone"
     t.integer "age"
     t.string "sex"
-    t.string "interests"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

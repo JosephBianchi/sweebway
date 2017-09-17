@@ -1,4 +1,6 @@
 class User < ApplicationRecord
-  has_many :trips
-  has_many :stations, through: :trips
+  has_and_belongs_to_many :interests
+  has_and_belongs_to_many :trips
+  has_many :hangouts
+  has_and_belongs_to_many :stations, through: :trips
 end
